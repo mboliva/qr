@@ -11,7 +11,7 @@
 	});
 	Instascan.Camera.getCameras().then(cameras =>
 	{
-		if(cameras.length > 0){
+		if(cameras.length > 1){
 			scanner.start(cameras[0]);
 		} else {
 			console.error("No existe camara en dispositivo");
