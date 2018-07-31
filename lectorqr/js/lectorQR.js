@@ -5,7 +5,7 @@
 	}
 	);
 	scanner.addListener("scan", function(content){
-		//alert("Escaneo de contenido: "+content);			
+		alert("Escaneo de contenido: "+content);			
 		
 		var http = new XMLHttpRequest();
 		var url = "/qr/lectorqr/consulta.html";
