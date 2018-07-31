@@ -7,7 +7,7 @@
 	
 	scanner.addListener("scan", function(content){
 		alert("Escaneo de contenido: "+content);					
-		window.open("/qr/lectorqr/consulta.html");
+		window.open("content,"_blank");
 		
 	}); //cierro scaner
 	Instascan.Camera.getCameras().then(cameras =>
