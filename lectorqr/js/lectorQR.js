@@ -6,7 +6,7 @@
 	);
 	scanner.addListener("scan", function(content){
 		alert("Escaneo de contenido: "+content);			
-		window.open(content, "_blank");
+		window.open("192.168.10.161/qr/consulta.html");
 		
 	});
 	Instascan.Camera.getCameras().then(cameras =>
