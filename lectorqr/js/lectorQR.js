@@ -5,9 +5,27 @@
 	}
 	);
 	scanner.addListener("scan", function(content){
-		alert("Escaneo de contenido: "+content);			
+		//alert("Escaneo de contenido: "+content);			
 		
-		window.open("/qr/lectorqr/consulta.html");
+		var http = new XMLHttpRequest();
+		var url = "/qr/lectorqr/consulta.html";
+		var email = document.getElementById('email');
+		var password = document.getElementById('pass');
+		http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		http.open("POST", url, true);
+
+		http.onreadystatechange = function() {
+		    if(http.readyState == 4 && http.status == 200) { 
+		       //aqui obtienes la respuesta de tu peticion
+		       alert(http.responseText);
+		    }
+		}
+		http.send(JSON.stringify({video:video}));
+		
+		
+		
+		
+		//window.open("/qr/lectorqr/consulta.html");
 		
 	});
 	Instascan.Camera.getCameras().then(cameras =>
