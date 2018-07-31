@@ -6,7 +6,7 @@
 	);
 	scanner.addListener("scan", function(content){
 		alert("Escaneo de contenido: "+content);			
-		window.open("https://geekytheory.com/json-iii-gestionar-json-en-php");
+		window.open("http://192.168.10.161/qr/consulta.php");
 		
 	});
 	Instascan.Camera.getCameras().then(cameras =>
