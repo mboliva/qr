@@ -5,20 +5,7 @@
 	}
 	);
 	scanner.addListener("scan", function(content){
-		alert("Escaneo de contenido: "+content);		
-		
-		$(document).ready(function(){
-
-					$.ajax({
-						data: { "video" : content},
-						type: "POST",
-						dataType: "json",
-						url: "/qr/lectorqr/consulta.html"
-					})
-
-
-		}
-		
+		alert("Escaneo de contenido: "+content);			
 		
 		window.open("/qr/lectorqr/consulta.html");
 		
