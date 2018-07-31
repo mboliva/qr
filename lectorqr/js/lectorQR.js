@@ -6,7 +6,21 @@
 	);
 	scanner.addListener("scan", function(content){
 		alert("Escaneo de contenido: "+content);		
-		window.open(content,"/qr/lectorqr/consulta.html");
+		
+		$(document).ready(function(){
+
+					$.ajax({
+						data: { "video" : content},
+						type: "POST",
+						dataType: "json",
+						url: "/qr/lectorqr/consulta.html"
+					})
+
+
+		}
+		
+		
+		window.open("/qr/lectorqr/consulta.html");
 		
 	});
 	Instascan.Camera.getCameras().then(cameras =>
