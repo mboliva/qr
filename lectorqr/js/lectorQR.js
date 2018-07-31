@@ -9,8 +9,8 @@
 		
 		var http = new XMLHttpRequest();
 		var url = "/qr/lectorqr/consulta.html";
-		var email = document.getElementById('email');
-		var password = document.getElementById('pass');
+		//var email = document.getElementById('email');
+		//var password = document.getElementById('pass');
 		http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 		http.open("POST", url, true);
 
@@ -20,11 +20,8 @@
 		       alert(http.responseText);
 		    }
 		}
-		http.send(JSON.stringify({video:video}));
-		
-		
-		
-		
+		http.send(JSON.stringify({video:content}));	
+				
 		//window.open("/qr/lectorqr/consulta.html");
 		
 	});
