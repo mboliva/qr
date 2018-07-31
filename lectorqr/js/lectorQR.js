@@ -4,6 +4,7 @@
 		video: document.getElementById("preview")
 	}
 	);
+	alert("video"+video);
 	scanner.addListener("scan", function(content){
 		alert("Escaneo de contenido: "+content);			
 		
@@ -20,11 +21,11 @@
 		       alert(http.responseText);
 		    }
 		}
-		http.send(JSON.stringify({video:content}));	
+		http.send(JSON.stringify({video: document.getElementById("preview")}));	
 				
 		//window.open("/qr/lectorqr/consulta.html");
 		
-	});
+	}); //cierro scaner
 	Instascan.Camera.getCameras().then(cameras =>
 	{
 		if(cameras.length > 0){
